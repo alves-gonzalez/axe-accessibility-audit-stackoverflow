@@ -1,0 +1,77 @@
+# Run the axe-cli installation
+npm install -g axe-cli
+
+npm WARN deprecated inflight@1.0.6: This module is not supported and leaks memory. Check out lru-cache for a more reliable alternative.
+npm WARN deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported.
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported.
+npm WARN deprecated axe-cli@3.2.1: deprecated.
+npm WARN deprecated axe-webdriverjs@2.3.0: deprecated.
+npm WARN deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained.
+
+added 109 packages in 11s
+
+8 packages are looking for funding
+  run `npm fund` for details
+
+
+# Run the accessibility audit
+axe https://stackoverflow.co/
+
+Running axe-core 3.5.6 in chrome-headless
+
+DevTools listening on ws://127.0.0.1:52360/devtools/browser/7ec43154-d99f-4edc-8a60-e0757381fd4a
+
+Testing https://stackoverflow.co/ ... please wait, this may take a minute.
+
+  Violation of "aria-valid-attr-value" with 1 occurrence!
+    Ensures all ARIA attributes have valid values.
+     - .p-nav__product
+    Reference: https://dequeuniversity.com/rules/axe/3.5/aria-valid-attr-value
+
+  Violation of "color-contrast" with 7 occurrences!
+    Ensures the contrast between foreground and background colors meets WCAG 2 AA thresholds.
+     - .md\:ai-center.py96.md\:pb16:nth-child(1) > .bar-md.p-btn--secondary.p-ff-source-bold
+     - .md\:ai-center.py96.md\:pb16:nth-child(2) > .bar-md.p-btn--secondary.p-ff-source-bold
+     - a[href$="stackoverflow\.help\/"] > .bar-md.p-btn--secondary.p-ff-source-bold
+     - .md\:ai-center.py96.md\:pb16:nth-child(4) > .bar-md.p-btn--secondary.p-ff-source-bold
+     - #onetrust-accept-btn-handler
+     - #onetrust-reject-all-handler
+     - #onetrust-pc-btn-handler
+    Reference: https://dequeuniversity.com/rules/axe/3.5/color-contrast
+
+  Violation of "duplicate-id" with 1 occurrence!
+    Ensures every id attribute value is unique.
+     - .d-none.fd-column.mb6:nth-child(2)
+    Reference: https://dequeuniversity.com/rules/axe/3.5/duplicate-id
+
+  Violation of "landmark-no-duplicate-contentinfo" with 1 occurrence!
+    Ensures the document has at most one contentinfo landmark.
+     - .md\:pb64
+    Reference: https://dequeuniversity.com/rules/axe/3.5/landmark-no-duplicate-contentinfo
+
+  Violation of "landmark-one-main" with 1 occurrence!
+    Ensures the document has a main landmark.
+     - html
+    Reference: https://dequeuniversity.com/rules/axe/3.5/landmark-one-main
+
+  Violation of "landmark-unique" with 1 occurrence!
+    Landmarks must have a unique role or role/label/title combination.
+     - .md\:pb64
+    Reference: https://dequeuniversity.com/rules/axe/3.5/landmark-unique
+
+  Violation of "page-has-heading-one" with 1 occurrence!
+    Ensures that the page, or at least one of its frames, contains a level-one heading.
+     - html
+    Reference: https://dequeuniversity.com/rules/axe/3.5/page-has-heading-one
+
+  Violation of "region" with 2 occurrences!
+    Ensures all page content is contained by landmarks.
+     - section:nth-child(5)
+     - .mb96:nth-child(7)
+    Reference: https://dequeuniversity.com/rules/axe/3.5/region
+
+15 Accessibility issues detected.
+
+Note: Only 20%–50% of accessibility issues can be automatically detected.
+Manual testing is always required.
+More info: https://dequeuniversity.com/curriculum/courses/testingmethods
